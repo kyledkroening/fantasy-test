@@ -12,6 +12,7 @@ import { TeamOwnership } from "./components/TeamOwnership";
 import { WeeklyMatchups } from "./components/WeeklyMatchups";
 import { HeadToHeadRecords } from "./components/HeadToHeadRecords";
 import { TeamPerformance } from "./components/TeamPerformance";
+import type { DataSource } from "./types";
 
 // Updated mock data with real participant names (2008-2024, 17 seasons)
 const mockLeagueStats = {
@@ -789,8 +790,7 @@ const mockDataSources = [
   }
 ];
 
-// Updated data source type
-type DataSource = typeof mockDataSources[0];
+// Data source type imported from types
 
 export default function App() {
   const [dataSources, setDataSources] = useState<DataSource[]>(mockDataSources);
